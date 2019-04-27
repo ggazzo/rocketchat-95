@@ -5,6 +5,8 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-draggable": "^3.3.0",
+    "react-draggable-hoc": "^0.0.18",
     "react-scripts": "3.0.0",
     "react95": "^1.0.3",
     "styled-components": "^4.2.0"
