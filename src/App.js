@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import {
+	reset,
+	themes,
+	AppBar,
+	Toolbar,
+	TextField,
+	Menu
+} from 'react95';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const ResetStyles = createGlobalStyle`
+  ${reset}
+`;
 
-export default App;
+export default props =>
+  <div className="App">
+    <ResetStyles />
+    <ThemeProvider theme={themes.default}>
+      <AppBar>
+      <Toolbar style={{ justifyContent: 'space-between' }}>
+        	<TextField placeholder="Search..." width={150} style={{ marginLeft: 4 }}/>
+      </Toolbar>
+    </AppBar>
+    </ThemeProvider>
+  </div>
